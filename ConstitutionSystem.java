@@ -70,6 +70,10 @@ public class ConstitutionSystem {
 		}
 		constitution.chapters.get(chapter - 2).setLastArticle(article);
 		//the state between 1 and 4 arguments is needed
+		if (args.length == 1){
+			System.out.println("Set first argument, choose one: \"chapter\", \"article\" or \"articles\"");
+			System.exit(0);
+		}
 		if (args[1].equals("chapter")){
 			if(Integer.parseInt(args[2]) < 1 || Integer.parseInt(args[2]) > 13){
 				System.out.println(args[2]+" is wrong number, try number between 1 and 13");
